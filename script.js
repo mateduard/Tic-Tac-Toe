@@ -66,7 +66,8 @@ function displayEnd(winner) {
     const endBox = document.querySelector('#end-box');
 
     if (winner === 0) {
-        endBox.innerHTML = `<h1>DRAW</h1>`
+        endBox.innerHTML = `<h1>DRAW</h1>`;
+        endCover.addEventListener('click', resetGame);
     } else {
         const image = winner === 1 ? 'cross.jpg' : 'circle.jpg';
         endBox.innerHTML = `
