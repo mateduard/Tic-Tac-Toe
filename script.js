@@ -2,9 +2,6 @@ const gameBox = document.querySelector('.game-box');
 const endCover = document.querySelector('#end-cover');
 
 let moveCounter = 1;
-/* let boxes = [[0, 0, 0],
-[0, 0, 0],
-[0, 0, 0]]; */
 let boxes = [0, 3, 4, 5, 6, 7, 8, 9, 10];
 
 gameBox.addEventListener('click', nextMove);
@@ -12,7 +9,6 @@ gameBox.addEventListener('click', nextMove);
 function nextMove(e) {
   createGameElement(e);
   checkEndOfGame();
-//   checkEndOfRounds();
 }
 
 function createGameElement(e) {
@@ -54,12 +50,12 @@ function checkEndOfGame() {
     if (moveCounter % 2 === 0) {
       displayEnd(1);
     } else {
-        displayEnd(2);
+      displayEnd(2);
     }
-    } else {
-        checkEndOfRounds();
-    }
+  } else {
+    checkEndOfRounds();
   }
+}
 
 function displayEnd(winner) {
   endCover.style.display = 'flex';
